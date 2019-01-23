@@ -1,4 +1,4 @@
-package edu.gatech.oad.antlab.person;
+package main.java.edu.gatech.oad.antlab.person;
 
 /**
  *  A simple class for person 5
@@ -31,7 +31,20 @@ public class Person5 {
 	 */
 	private String calc(String input) {
 	  //Person 5 put your implementation here
-	  return null;
+		StringBuilder modified = new StringBuilder();
+		if (input.length() > 2) {
+			for (int i = 2; i < input.length(); i++) {
+				modified.append(input.charAt(i));
+			}
+			modified.append(input.charAt(1));
+			modified.append(input.charAt(0));
+			return modified.toString();
+		} else if (input.length() == 2) {
+			modified.append(input.charAt(1));
+			modified.append(input.charAt(0));
+			return modified.toString();
+		}
+		return input;
 	}
 	
 	/**
